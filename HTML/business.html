@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="description" content="New Web One Stop">
+	    <meta name="author" content="New Web One Stop">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      	<link rel="stylesheet" href="./style.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	    <link href="theme.css" rel="stylesheet" type="text/css">
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		
+		<title>New Web One Stop</title>
+
+  <style>
+	html {
+	 min-height:100%; /* This is required to ensure that the gradient stretches across the whole page */
+	}
+	 .header {
+	  background-color: #00CED1;
+		text-align:center;
+	  padding:5px;
+	 }
+	h2 {
+	 font-family: Verdana;
+	  color: #006E34;
+	 }
+	body {
+	 background: -webkit-linear-gradient(#ff0000, #ff69b4); /* Chrome 10+, Safari 5.1+ */
+	  background: -o-linear-gradient(#ff0000, #ff69b4); /* Opera 11.1+ */
+		background: -moz-linear-gradient(#ff0000, #ff69b4); /* Firefox 3.6+ */
+	  background: linear-gradient(#ff0000, #ff69b4); /* Standard syntax (must be last) */
+	 background-color: #93B874; /* It's a good idea to set a background color in case the gradient doesn't load */
+	}
+	#mainNav{
+	 /*remove padding and margin*/
+	  padding:0;
+		margin:0;
+	  font-family:sans-serif;
+	 }
+	#mainNav ul{
+	 width:100%;
+	  margin:0;
+		padding:0;
+		 float:left;
+		  /*for the background*/
+			/*background-color: #00ffff;*/
+		  background-image:linear-gradient(top, rgba(25,100,175,1), rgba(204,204,204,.5),rgba(204,204,204,.5), rgba(25,100,175,1));
+		 background-image:-webkit-linear-gradient(top, rgba(25,100,175,1), rgba(204,204,204,.5),rgba(204,204,204,.5), rgba(25,100,175,1));
+		text-align:center;
+	  }
+	 #mainNav li{
+	  list-style-type: none;
+		padding:0;
+		 margin:0;
+		float:left; 
+	  /*needed for the drop down to work*/
+	 }
+	 #mainNav ul li a{
+	  display:inline-block;
+		margin:0;
+		 text-decoration:none;
+		  padding: 10px;
+			color: black;
+			 min-width:140px;
+			/*background-color:black;*/
+		  text-align:center;
+		 font-weight: bolder;
+		float:left;
+	  }
+	 #mainNav ul li a:hover{
+	  background-color:lightgray;
+	 }
+	 #mainNav li ul{
+	  display:none;
+		width:160px; 
+	  /*adjusted with the width of the mainNav ul li a*/
+	 }
+	 #mainNav li:hover ul{
+	  display:block;
+		float:left;
+		 position:absolute;
+		/*needed for the dropdown to not overlap*/
+	  margin-top:35px;
+	 }
+<!--- footer box --->
+	 .nav {
+	  line-height:30px;
+		background-color:rgba(0, 191, 255, .5);
+		 height:200px;
+		  width:50px;
+		 float:center;
+		padding:200px;
+	  }
+	  .img {
+		display: block;
+		 margin: 2 auto;
+		}
+	  header{
+		/*all information hear will be centered*/
+		 text-align:center;
+		font-family:sans-serif;
+	  }
+	  .imageGallery{
+		/*restrict the width of the gallery*/
+		 width: 70%;
+		  /*all at the centers*/
+			text-align:center;
+			 border: 1px solid #000000; /*remove mamaya*/
+			/*place the box at the center of the browser's
+		  width*/
+		 margin:0 auto;
+		}
+	  .imageGallery h2{
+		font-family: sans-serif;
+		 text-transform: uppercase;
+		  letter-spacing: 10px;
+			background-color:rgba(85,53,0,1);
+			 color: rgba(255,223,170,1);
+			padding-top:5px;
+		  padding-bottom:5px;
+		 /*optional - you can insert text shadow if you want*/
+		}
+		.imageGallery a{
+		 /*remove the underline of the anchor tag*/
+		  text-decoration: none;
+			/*gives a new color for the anchor tag*/
+		  color: rgba(000,000,000,1);
+		 font-family: sans-serif;
+		}
+		.imageGalleryPic{
+		 /*controls transparency of image*/
+		  opacity:0.5;
+			/*eaqrlier versions of ie does not support opacity*/
+			 filter:alpha(opacity:0.5);
+			  /*controls the width of the box*/
+				width:150px;
+			  border:2px rgba(212,172,106,075);
+			 padding:5px; /*give images space with the border*/
+			margin:5px; /*spaces between images*/
+		  /*display images horizontslly - depends on the width*/
+		 display: inline-block;
+		}
+		.imageGalleryPic img{
+		 width: 100%; /*adjust with the imageGallerypic size*/
+		text-align-center;
+		}
+		.imageGalleryPic figcaption{
+		 font-family: sans-serif;
+		  text-transform: uppercase;
+			background-color:rgba(212,172,106,0.75);
+		  margin:0;
+		 padding:5px 0px 5px 0px;
+		}
+		/*this will happen if you hover the image*/
+		 .imageGalleryPic:hover{
+		  opacity:1;
+		 filter:alpha(opacity:100);
+		border:2px solid rgba(212,172,106,1);
+		}
+		.section {
+		 width:200px;
+		  float:left;
+		 padding:10px;
+		}
+		.footer {
+		 background-color:#00CED1;
+		  color:red;
+			clear:both;
+		  text-align:center;
+		 padding:5px;
+		}
+	  </style>
+
+	 </head>
+
+	<nav id="mainNav">
+	 <ul>
+	  <li><a href="#">NWorld Natz</a>
+	 <ul>
+	  <li><a href="product.html">Product Details</a></li>
+		<li><a href="contactus.html">Contact Us</a></li>
+		 <li><a href="gallery.html">Gallery</a></li>
+		  <li><a href="business.html">Business</a></li>
+			<li><a href="video.html">Video</a></li>
+		  </ul>
+		 </li>
+		</nav>
+<body>
+	<body role="document" bgcolor="#00CED1">
+		<div id="demo"></div>
+	  <font color="red"> NWORLD </font><br>
+		  <!-- Fixed navbar --->
+	 <nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container">
+
+			<center>For free demo, orientation and more info please fill-up this form:</center><br><br>
+		  <form name="submitform" action="register.php" method="post" target="_blank"
+			onsubmit="return formValidator(leadform)">
+	<!--- table form --->
+		<table width="350" align="center" bgcolor="33FFFF">
+		<tr> 
+		 <td width="350" height="250">
+		  <div align="center">
+		 <p><strong><font color="#FF0000" size="5" face="Verdana, Arial, Helvetica, sans-serif">Try our hi-end beauty and whitening products.</font></strong></p>
+		</div>
+		<hr />	
+	 <p><center><h4>Distributor's Details:</h4></center></p>
+	  <hr />	 
+	  First Name:
+		<input type="text" name="firstname"><br>
+	  Middle Name:
+		<input type="text" name="middlename"><br>
+	  Last Name:
+		<input type="text" name="lastname"><br>
+	  Gender: Are you male or female?<br>
+		<input type="radio" name="sex" value="male">Male
+		 <input type="radio" name="sex" value="female">Female<br>
+
+		<select name="DOBMonth">
+		  <option> - Month - </option>
+			 <option value="January">January</option>
+			<option value="Febuary">Febuary</option>
+			 <option value="March">March</option>
+			 <option value="April">April</option>
+				<option value="May">May</option>
+				<option value="June">June</option>
+				 <option value="July">July</option>
+				<option value="August">August</option>
+			  <option value="September">September</option>
+			 <option value="October">October</option>
+			<option value="November">November</option>
+		  <option value="December">December</option>
+		</select>
+
+		<select name="DOBDay">
+		  <option> - Day - </option>
+			<option value="1">1</option>
+			 <option value="2">2</option>
+			  <option value="3">3</option>
+				<option value="4">4</option>
+				 <option value="5">5</option>
+				  <option value="6">6</option>
+					<option value="7">7</option>
+					 <option value="8">8</option>
+					  <option value="9">9</option>
+						<option value="10">10</option>
+						 <option value="11">11</option>
+						  <option value="12">12</option>
+							<option value="13">13</option>
+							 <option value="14">14</option>
+							  <option value="15">15</option>
+								<option value="16">16</option>
+							  <option value="17">17</option>
+							 <option value="18">18</option>
+							<option value="19">19</option>
+						  <option value="20">20</option>
+						 <option value="21">21</option>
+						<option value="22">22</option>
+					  <option value="23">23</option>
+					 <option value="24">24</option>
+					<option value="25">25</option>
+				  <option value="26">26</option>
+				 <option value="27">27</option>
+				<option value="28">28</option>
+			  <option value="29">29</option>
+			 <option value="30">30</option>
+			<option value="31">31</option>
+			<br>
+		 </select>
+		 <br>
+	
+		  <select name="DOBYear">
+		<option value="1947">1947</option>
+		 <option value="1948">1948</option>
+		  <option value="1949">1949</option>
+			<option value="1950">1950</option>
+			 <option value="1951">1951</option>
+			  <option value="1952">1952</option>
+				<option value="1953">1953</option>
+				 <option value="1954">1954</option>
+				  <option value="1955">1955</option>
+					<option value="1956">1956</option>
+					 <option value="1957">1957</option>
+					  <option value="1958">1958</option>
+						<option value="1959">1959</option>
+						 <option value="1960">1960</option>
+						  <option value="1961">1961</option>
+							<option value="1962">1962</option>
+							 <option value="1963">1963</option>
+							  <option value="1964">1964</option>
+								<option value="1965">1965</option>
+								 <option value="1966">1966</option>
+								  <option value="1967">1967</option>
+									<option value="1968">1968</option>
+									 <option value="1969">1969</option>
+									  <option value="1970">1970</option>
+										<option value="1971">1971</option>
+									  <option value="1972">1972</option>
+									 <option value="1973">1973</option>
+									<option value="1974">1974</option>
+								  <option value="1975">1975</option>
+								 <option value="1976">1976</option>
+								<option value="1977">1977</option>
+							  <option value="1978">1978</option>
+							 <option value="1979">1979</option>
+							<option value="1980">1980</option>
+						  <option value="1981">1981</option>
+						 <option value="1982">1982</option>
+						<option value="1983">1983</option>
+					  <option value="1984">1984</option>
+					 <option value="1985">1985</option>
+					<option value="1986">1986</option>
+				  <option value="1987">1987</option>
+				 <option value="1988">1988</option>
+				<option value="1989">1989</option>
+			  <option value="1990">1990</option>
+			 <option value="1991">1991</option>
+			<option value="1992">1992</option>
+		  <option value="1993">1993</option>
+		 <option value="1994">1994</option>
+		<option value="1995">1995</option>
+	  <option value="1996">1996</option>
+	 <option value="1997">1997</option>
+	<option value="1998">1998</option>
+  </select><br>
+	
+	
+Marital Status:<br>
+		<select><option>Single</option>
+	 <option>Married</option> 
+	  <option> Widow </option>
+	 </select><br>
+	 
+  Address:
+	<input type="text" name="address"><br>
+  Occupation:
+	<input type="text" name="occupation"><br>
+  Contact Number:
+	<input type="text" name="contactnumber"><br>
+		<hr />
+	 <p><center><h4>Spouse / Beneficiary Details:</h4></center></p>
+	 <hr />
+  First Name:
+	<input type="text" name="firstname"><br>
+  Middle Name:
+	<input type="text" name="middlename"><br>
+  Last Name:
+	<input type="text" name="lastname"><br>
+  Gender: Are you male or female?<br>
+	<input type="radio" name="sex" value="male">Male
+	 <input type="radio" name="sex" value="female">Female<br>
+
+	<select name="DOBMonth">
+	  <option> - Month - </option>
+		<option value="January">January</option>
+		 <option value="Febuary">Febuary</option>
+		  <option value="March">March</option>
+			<option value="April">April</option>
+			 <option value="May">May</option>
+			 <option value="June">June</option>
+			<option value="July">July</option>
+			 <option value="August">August</option>
+		  <option value="September">September</option>
+		 <option value="October">October</option>
+		<option value="November">November</option>
+	  <option value="December">December</option>
+	</select>
+
+	<select name="DOBDay">
+		<option> - Day - </option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		 <option value="3">3</option>
+		  <option value="4">4</option>
+			<option value="5">5</option>
+			 <option value="6">6</option>
+			  <option value="7">7</option>
+				<option value="8">8</option>
+				 <option value="9">9</option>
+				  <option value="10">10</option>
+					<option value="11">11</option>
+					 <option value="12">12</option>
+					  <option value="13">13</option>
+						<option value="14">14</option>
+						 <option value="15">15</option>
+						  <option value="16">16</option>
+						 <option value="17">17</option>
+						<option value="18">18</option>
+					  <option value="19">19</option>
+					 <option value="20">20</option>
+					<option value="21">21</option>
+				  <option value="22">22</option>
+				 <option value="23">23</option>
+				<option value="24">24</option>
+			  <option value="25">25</option>
+			 <option value="26">26</option>
+			<option value="27">27</option>
+		  <option value="28">28</option>
+		 <option value="29">29</option>
+		<option value="30">30</option>
+	  <option value="31">31</option><br>
+	</select><br>
+	
+	<select name="DOBYear">
+	 <option value="1947">1947</option>
+	  <option value="1948">1948</option>
+		<option value="1949">1949</option>
+		 <option value="1950">1950</option>
+		  <option value="1951">1951</option>
+			<option value="1952">1952</option>
+			 <option value="1953">1953</option>
+			  <option value="1954">1954</option>
+				<option value="1955">1955</option>
+				 <option value="1956">1956</option>
+				  <option value="1957">1957</option>
+					<option value="1958">1958</option>
+					 <option value="1959">1959</option>
+					  <option value="1960">1960</option>
+						<option value="1961">1961</option>
+						 <option value="1962">1962</option>
+						  <option value="1963">1963</option>
+							<option value="1964">1964</option>
+							 <option value="1965">1965</option>
+							  <option value="1966">1966</option>
+								<option value="1967">1967</option>
+								 <option value="1968">1968</option>
+								  <option value="1969">1969</option>
+									<option value="1970">1970</option>
+									 <option value="1971">1971</option>
+									  <option value="1972">1972</option>
+										<option value="1973">1973</option>
+										 <option value="1974">1974</option>
+										  <option value="1975">1975</option>
+											<option value="1976">1976</option>
+											 <option value="1977">1977</option>
+											  <option value="1978">1978</option>
+												<option value="1979">1979</option>
+												 <option value="1980">1980</option>
+												  <option value="1981">1981</option>
+												 <option value="1982">1982</option>
+												<option value="1983">1983</option>
+											  <option value="1984">1984</option>
+											 <option value="1985">1985</option>
+											<option value="1986">1986</option>
+										  <option value="1987">1987</option>
+										 <option value="1988">1988</option>
+										<option value="1989">1989</option>
+									  <option value="1990">1990</option>
+									 <option value="1991">1991</option>
+									<option value="1992">1992</option>
+								  <option value="1993">1993</option>
+								 <option value="1994">1994</option>
+								<option value="1995">1995</option>
+							  <option value="1996">1996</option>
+							 <option value="1997">1997</option>
+							<option value="1998">1998</option>
+						  <option value="1999">1967</option>
+						 <option value="2000">1968</option>
+						<option value="2001">1969</option>
+					  <option value="2002">1970</option>
+					 <option value="2003">1971</option>
+					<option value="2004">1972</option>
+				  <option value="2005">1973</option>
+				 <option value="2006">1974</option>
+				<option value="2007">1975</option>
+			  <option value="2008">1976</option>
+			 <option value="2009">1977</option>
+			<option value="2010">1978</option>
+		  <option value="2011">1979</option>
+		 <option value="2012">1980</option>
+		<option value="2013">1981</option>
+	  <option value="2014">1982</option>
+	 <option value="2015">1983</option>
+	<option value="2016">1984</option>
+  </select><br>
+	
+  Marital Status:<br>
+	<select><option>Single</option>
+	 <option>Married</option> 
+	<option> Widow </option>
+  </select><br>
+	 
+  Address:
+	<input type="text" name="address"><br>
+  Occupation:
+	<input type="text" name="occupation"><br>
+  Contact Number:
+	<input type="text" name="contactnumber"><br>
+	<hr />
+  <p><center><h4>Sponsor:</h4></center></p>
+  <hr />
+	First Name:
+	 <input type="text" name="firstname"><br>
+	Middle Name:
+	 <input type="text" name="middlename"><br>
+	Last Name:
+	 <input type="text" name="lastname"><br>
+	IDTC No.:
+	 <input type="text" name="NP771336"><br>
+
+  Check the kind of Ntrepreneur you like:<br>
+	<input type="checkbox" name="language" 
+	value="Retailer">To be a Retailer<br>
+	 <input type="checkbox" name="language" 
+	 value="Distributor">To become a Distributor<br>
+	  <input type="checkbox" name="language" 
+	  value="Dealer or Investor">I like to be a Dealer or Investor<br>
+	<div align="center">
+		<font size="1" face="Verdana, Arial, Helvetica, sans-serif">
+			Do you like to try our hi-end products?<br>
+		</font>
+		</div>
+		</td>
+  </tr>
+ <tr>
+	 <td><input type="button" name="#" value="Submit" onclick=""></td>
+ </tr>		
+</table>
+ </form>
+
+<!---END OF ADD FORM--><br>
+ <p><center><h4>Distributorship  Terms  &  Condition</h4></center></p>
+  <hr />
+  <p>As a New Distributor of  ALPHANETWORLD CORPORATION  or  NWORLD, I understand and agree to the following:<br> 
+	1.  I am of legal age upon entering into this Distributorship Agreement, otherwise, I will submit a parental consent waiver together with this agreement;<br>  
+	 2.  This application shall constitute a binding agreement between me and NWORLD upon receipt and due approval of the Company;<br>  
+	  3.  I fully understand that this Distributorship Agreement is personal in nature and is not transferrable nor assignable except  in the event of my death, where law on intestate succession applies, however, subject to existing Company’s policy on qualification as Independent&nbpsDistributor;<br>  
+		4.  I attest that I personally participated and was personally presented with the NWORLD&nbpsBusiness Presentation and Product Orientation prior to selling the NWORLD products;			  
+		 5. As an NWORLD Independent Distributor, I can now engage in the direct selling of its products. Further, it is hereby understood that there is no required minimum product purchase that I need to make		and no required minimum inventory that I need to maintain in order to sustain my status as an Independent Distributor.<br>  
+		  6.  I shall be eligible to sales bonuses, discounts, and privileges that may be granted by the company relative to my sales performance or successful delivery of products. Relevant to my sales activity, I further understand that sales bonuses, rebates and/or commissions are in accordance with the compensation scheme established in the NWORLD Marketing Plan, provided, that I have achieved such			sales performance in good faith, and that I have not violated any of the provisions of the&nbpsDistributorship Agreement, Code  of Ethics, and Company Policies;<br>  
+			7.  This Distributorship Agreement limits a no employee – employer relationship between me and NWORLD; neither that I may claim  to be a legal representative of NWORLD, nor bind NWORLD in any		agreements other than those stipulated herein; <br> 
+			 8.  As Independent Distributor, I am bound to abide the Company’s rules and regulations, and faithfully uphold the Code of Conduct and Ethical Standard. Should I commit any form of violation, and be		subjected to the necessary sanctions and penalties as provided in the Code of Conduct and Ethical Standard, I voluntarily  release NWORLD from any liabilities these sanctions and penalties may cause		as a consequence;<br>  
+			9.  I understand that I should secure an express written approval from the management of NWORLD or any of its authorized representative prior to making any form of advertisement in mainstream media,		social networking sites, internet, and online media, including, but not limited to audio, visual and printed materials, other than the Company’s existing&nbpsadvertisement and marketing materials and postings		on its official website and official social media pages; <br> 
+		  10. I am aware that making any&nbpsmisrepresentations, revisions, modifications, or alterations of the Company’s trademark, brand,  logos, marks, marketing plan, products, advertisement, marketing materials, and other company provided marketing tools, is strictly prohibited. Otherwise, it shall be deemed violation of the Company’s rules, regulations and policies; <br> 
+		 11. As a general rule, should my spouse join NWORLD as an Independent Distributor, he/she shall automatically be under my sales  team. Otherwise, this shall constitute violation of the Cross-lining		 provision as defined on the Code of Conduct and Ethical Standard;<br>  
+		12. I affirm to exclusively join the sponsor I personally indicated in this Application Form or adhere to the “six month rule” in the event I have decided to sign-up to another sponsor line		 (Please see “six month rule” details on NWorld’s Code of  Conduct chart.); <br> 
+	  13. I shall diligently settle to the designated government agency/local government unit all due taxes from the taxable sales bonuses I have earned from NWORLD. <br> 
+	 14. I am fully aware that the NWORLD reserves the right to modify, revise, and update its&nbpsexisting policies and business plan for the best interest of the company and its Distributors with 30 days prior notice; <br> 
+	15. I conform to conduct all my sales activities in accordance with the existing laws of the Republic of the Philippines and release NWORLD from any liability arising from my own personal actions; <br> 
+  16. I hereby certify that the above information are true and correct to the best of my&nbpsknowledge. In case of any violation of  the terms and conditions herein stipulated, I hereby agree and authorize NWORLD to revoke, deactivate, and/or suspend my privileges as Independent Distributor without prejudice to any charges, criminal and/or civil, that NWORLD may charge against me, without limitation to any false information I have provided herein.<br>		
+		I fully understand and further confirm this authority that  I am conferring NWORLD to do so is with my own free will and volition, without any force, intimidation or undue influence employed upon me.</p>
+ </form>
+</div>
+	
+	<hr />
+  <div id = "pixels">
+  	<center>
+		<h3>NLighten Whitening and Beauty Products</h3>
+	  <p>Made in Korea, high-end, and effective.</p>
+	 <center>
+	 	<hr />
+	<center>
+		<h3>NHance Supplement Products</h3>
+	  <p>Made in the Philippines, high-end, and effective.</p>
+	 <center>
+	</div>
+
+		 <div class="carousel-inner" role="listbox">
+		 </div>
+		  <a class="left carousel-control" 
+		  href="https://u688683740.justbiz.online/public_html/images" 
+		  role="button" data-slide="">
+			<span class="glyphicon glyphicon-chevron-left"
+			 aria-hidden="true">
+			 </span>
+			<span class="sr-only">
+		  </span>
+		 </a>
+
+		 <a class="right carousel-control" 
+		 href="https://u688683740.justbiz.online/public_html/images" 
+		 role="button" data-slide="">
+		<span class="glyphicon glyphicon-chevron-right"
+		 aria-hidden="true">
+		 </span>
+		<span class="sr-only">
+		 </span>
+		</a>
+
+	  <div class="row">
+		</div>
+		<hr />
+<!-- /container -->
+	  <div class="container well">
+		<h3>
+			<center>The era of new Ntrepreneur</center>
+		</h3>
+	  </div>
+       <center>		 
+				 <p class="footertext">You can be a Retailer or a Distributor.</p>
+				  <br>
+				 </center>
+				</div>
+
+				<div class="col-md-4">
+				 <center>
+				  <br>
+				 <div class="row">
+					 <hr />
+				  <p>
+					  <center>
+						<a href="images/img03.jpg">Contact Us</a>
+						 </center>
+						</p>
+						
+					 <center>Copyright 2016</center>
+					<br>
+						  
+					<div id="fb-root">
+					</div>
+					 <div class="fb-follow" 
+					 data-href="https://www.facebook.com/Onat40/" 
+					 data-layout="standard" data-show-faces="true">
+					  <a target="_blank" title="follow me"
+						href="https://m.facebook.com/Onat40/?ref=bookmarks">
+						  <img alt="Follow Us" 
+						  src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" 
+						  border="0">
+					  </a>
+					 </div>
+					<br>‌
+					  <address>Jonathan A. Sadullo<br>‌
+					  +639375384517<br>‌
+					  jazbiz38@gmail.com<br>‌
+					  </address>
+						<hr />
+					 <div>
+					  <a class="navbar-brand" 
+					  href="https://u688683740.justbiz.online/public_html/HTML/index.html">
+					  </a>
+					 </div>
+					 
+					 <div class="container" id="navbar"
+					 class="navbar-collapse collapse"> |
+					  <a class="nav navbar-nav">
+						<a class="active">
+						 <a href="index.html" 
+						 class="btn btn-default">Home</a>
+						</a> |
+						<a>
+						 <a href="product.html" 
+						 class="btn btn-primary">Product Details</a>
+						</a> |
+						 <a>
+							 <a href="contactus.html" 
+							 class="btn btn-success">Contact Us</a>
+						 </a> |
+						 <a>
+							 <a href="gallery.html" 
+							 class="btn btn-info">Gallery</a>
+						 </a> |
+						 <a>
+							 <a href="video.html" 
+							 class="btn btn-warning">Video</a>
+						 </a> |
+						 <a>
+							 <a href="business.html" 
+							 class="btn btn-danger">Business</a>
+						 </a> |
+						</div>
+					  </div>
+					 </div>
+					</nav>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+				  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+					<script src="window.jQuery || document.write" <script src="../../assets/js/vendor/jquery.min.js"></script></script>
+					 <script src="../../dist/js/bootstrap.min.js"></script>
+					<script src="../../assets/js/docs.min.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+				  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+					<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+				  <script src="../../assets/js/ie8-responsive-file-warning.js"></script>
+					<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+<!--complied jquery and bootstrap js-->
+				  <script src="jquery/jquery-1.11.3.min.js"
+"https://u688683740.justbiz.online/web-ftp-client/index.php$?#/public_html/jquery">
+				 </script>
+
+				<script>(function(d, s, id) {
+				 var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+				 fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			  </script>
+
+			 <script src="bootstrap-3.3.5/js/bootstrap.min.js"
+			  "https://u688683740.justbiz.online/web-ftp-client/index.php?#/public_html/bootstrap-3.3.5">
+			 </script>
+
+			 <script src="js/blueimp-gallery.js"
+			  "file:///C:/Users/WebDesign.NC3-2/BootstrapActivities/js/blueimp-gallery.js">
+			 </script>
+
+<!-- Hotjar Tracking Code for http://www.onehi-energyteam.comlu.com -->
+			 <script>
+			  (function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				 h._hjSettings={hjid:213279,hjsv:5};
+				  a=o.getElementsByTagName('head')[0];
+				 r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			  a.appendChild(r);
+			 })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+			</script>
+
+<!--- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+<!-- Hosting24 Analytics Code -->
+			<script type="text/javascript" src="http://stats.hosting24.com/count.php"></script>
+
+<!-- End Of Analytics Code -->
+			<script>
+			  (function(d, s, id) 
+				{
+				var js, fjs = d.getElementsByTagName(s)[0];
+				 if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+			 fjs.parentNode.insertBefore(js, fjs);
+			}
+		  (document, 'script', 'facebook-jssdk'));
+		 </script>
+		</body>
+	  </html>

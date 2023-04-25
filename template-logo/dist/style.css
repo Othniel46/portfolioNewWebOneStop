@@ -1,0 +1,27 @@
+#svg-wrapper {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 53px;
+  height: auto;
+}
+#svg-wrapper svg {
+  position: relative;
+  padding: 0px !important;
+  stroke: none;
+}
+#svg-wrapper:hover {
+  width: 56px;
+  transition: width 0.1s;
+  -webkit-transition: width 0.1s;
+  /* Safari */
+}
+
+.toggle-animation {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: solid 1px;
+  font-family: helvetica;
+}
